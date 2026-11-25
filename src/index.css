@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cine-bg: #09090c;
+    --cine-surface: #111116;
+    --cine-hairline: rgba(255, 255, 255, 0.065);
+    --cine-accent: #e50914;
+    --cine-gold: #d4a853;
+    --cine-text: #f3f3f6;
+    --cine-muted: #8a8a96;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cine-bg);
+    color: var(--cine-text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Bebas Neue', 'Inter', sans-serif;
+}
+
+/* Subtle cinema film grain overlay */
+.cine-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Clean custom scrollbar for horizontal/modal views */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cine-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.cine-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cine-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+}
+.cine-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
